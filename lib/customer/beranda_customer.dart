@@ -19,37 +19,35 @@ class BerandaCustomer extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              padding: const EdgeInsets.only(left: 5),
-              width: MediaQuery.of(context).size.width * 0.77,
+            SizedBox(
+              width: 180,
               height: 40,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(5),
-                  boxShadow: const [
-                    BoxShadow(
-                        color: Colors.black45,
-                        offset: Offset(0, 0),
-                        spreadRadius: 1,
-                        blurRadius: 2)
-                  ]),
-              child: TextField(
-                decoration: const InputDecoration(
-                    hintText: "Search",
-                    suffixIcon: Icon(Icons.search_outlined),
-                    border: InputBorder.none),
-                onChanged: (value) {},
-              ),
+              child: Image.asset("image/Preview.png"),
             ),
-            IconButton(
-              iconSize: 30,
-              icon: const Icon(Icons.shopping_cart_outlined),
-              onPressed: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: ((context) {
-                  return const MenuCustomer();
-                })));
-              },
+            Row(
+              children: [
+                IconButton(
+                  icon: Icon(
+                      color: warnaBackground, Icons.shopping_cart_outlined),
+                  iconSize: 25,
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: ((context) {
+                      return const MenuCustomer();
+                    })));
+                  },
+                ),
+                IconButton(
+                  iconSize: 25,
+                  icon: Icon(color: warnaBackground, Icons.chat_outlined),
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: ((context) {
+                      return const MenuCustomer();
+                    })));
+                  },
+                ),
+              ],
             )
           ],
         ),
@@ -71,43 +69,67 @@ class BerandaCustomer extends StatelessWidget {
             ),
           ),
           Container(
-              height: 200,
-              color: warnaBackground,
-              child: const CategoryIcon()),
+              height: 200, color: warnaBackground, child: const CategoryIcon()),
           Container(
             padding: const EdgeInsets.all(4),
             color: warnaBackground,
             child: const Align(
                 alignment: Alignment.topCenter,
-                child: Row(
+                child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ProductCard(
-                        assetImage: AssetImage("image/vector.jpeg"),
-                        productName: "Oppo",
-                        productPrice: "Rp. 3.999.000,00",
+                        assetImage: AssetImage("image/burger.jpg"),
+                        shopName: "mamang",
+                        productName: "Cheese Burger",
+                        productPrice: "15.000",
+                        distance: "4",
                       ),
                       ProductCard(
-                        assetImage: AssetImage("image/vector.jpeg"),
-                        productName: "Oppo",
-                        productPrice: "Rp. 3.999.000,00",
+                        assetImage: AssetImage("image/burger.jpg"),
+                        shopName: "mamang",
+                        productName: "Cheese Burger",
+                        productPrice: "15.000",
+                        distance: "4",
+                      ),
+                      ProductCard(
+                        assetImage: AssetImage("image/burger.jpg"),
+                        shopName: "mamang",
+                        productName: "Cheese Burger",
+                        productPrice: "15.000",
+                        distance: "4",
                       ),
                     ])),
           )
         ],
       )),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: const BottomAppBar(
         height: 60,
-        color: colorprimar,
-        child: const Row(
+        color: Colors.white,
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Icon(Icons.store),
             Icon(Icons.event_note_rounded),
+            SizedBox(width: 40),
             Icon(Icons.notifications),
             Icon(Icons.person),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Container(
+        width: 60.0,
+        height: 60.0,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color: Colors.black, width: 2.0),
+        ),
+        child: FloatingActionButton(
+            onPressed: () {},
+            shape: const CircleBorder(),
+            backgroundColor: warnaBackground,
+            child: const Image(image: AssetImage("image/cart.png"))),
       ),
     );
   }

@@ -27,7 +27,10 @@ class Register extends StatelessWidget {
                   Container(
                       margin: const EdgeInsets.only(top: 20),
                       padding: const EdgeInsets.only(
-                          left: 10, right: 10, top: 10,),
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                      ),
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -184,11 +187,11 @@ class Register extends StatelessWidget {
                                             return const BerandaCustomer();
                                           })));
                                         },
-                                        child: const Center(
+                                        child: Center(
                                             child: Text(
                                           "SIGN UP",
                                           style: TextStyle(
-                                              color: Colors.white,
+                                              color: warnaBackground,
                                               fontSize: 14,
                                               fontWeight: FontWeight.bold),
                                         )),
@@ -196,8 +199,7 @@ class Register extends StatelessWidget {
                                     ),
                                   ),
                                   FloatingActionButton(
-                                    backgroundColor: const Color.fromARGB(
-                                        255, 228, 228, 228),
+                                    backgroundColor: colorprimar,
                                     elevation: 0,
                                     mini: true,
                                     onPressed: () {},
@@ -209,8 +211,7 @@ class Register extends StatelessWidget {
                                                 AssetImage("image/gmail.png"))),
                                   ),
                                   FloatingActionButton(
-                                    backgroundColor: const Color.fromARGB(
-                                        255, 228, 228, 228),
+                                    backgroundColor: colorprimar,
                                     elevation: 0,
                                     mini: true,
                                     onPressed: () {
@@ -224,6 +225,7 @@ class Register extends StatelessWidget {
                                         padding: const EdgeInsets.fromLTRB(
                                             2, 2, 2, 2),
                                         child: const Image(
+                                            color: Colors.white,
                                             image:
                                                 AssetImage("image/guest.png"))),
                                   )
@@ -244,9 +246,9 @@ class Register extends StatelessWidget {
                                     ),
                                   ),
                                   TextButton(
-                                    child: const Text("Sign in!",
+                                    child: Text("Sign in!",
                                         style: TextStyle(
-                                          color: Color.fromARGB(174, 65, 65, 177),
+                                          color: warnaTekslink,
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold,
                                         )),
