@@ -1,21 +1,13 @@
 import 'package:flutter/material.dart';
 
-List<Image> page = [
-  const Image(image: AssetImage("image/laptop_a.png")),
-  const Image(image: AssetImage("image/laptop_c.png")),
-  const Image(image: AssetImage("image/laptop_b.png")),
-  const Image(image: AssetImage("image/laptop_d.png")),
-  const Image(image: AssetImage("image/smartphone_a.png")),
-  const Image(image: AssetImage("image/smartphone_b.png")),
-  const Image(image: AssetImage("image/smartphone_c.png")),
-  const Image(image: AssetImage("image/smartphone_d.png")),
-  const Image(image: AssetImage("image/smartphone_e.png")),
+List<Image> diskon = [
+  Image.asset("image/promo.jpg", fit: BoxFit.cover),
+  Image.asset("image/promo.jpg", fit: BoxFit.cover),
+  Image.asset("image/promo.jpg", fit: BoxFit.cover),
+  Image.asset("image/promo.jpg", fit: BoxFit.cover),
+  Image.asset("image/promo.jpg", fit: BoxFit.cover),
 ];
 
-List <Color> colors = [
-  Colors.amber,
-  Colors.cyan,
-  Colors.brown,
-  Colors.black,
-  Colors.blue
+List<Image> kategori = [
+  Image.asset("image/fast food.jpg", fit: BoxFit.cover),
 ];

@@ -1,109 +1,147 @@
 import 'package:flutter/material.dart';
 
 class CategoryIcon extends StatelessWidget {
-  final AssetImage image;
+  final TextStyle textStyle = const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold
+  );
 
-  const CategoryIcon({super.key, this.image = const AssetImage("")});
+  const CategoryIcon({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection:Axis.horizontal,
       child: Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.only(top: 10, left: 5, right: 5, bottom: 5),
         child: Align(
           alignment: Alignment.topLeft,
-          child: Column(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                margin: const EdgeInsets.only(bottom: 10),
-                child: const Text(
-                  "Kategori :",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                margin: const EdgeInsets.only(right: 10),
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 5),
+                        width: 85,
+                        height: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.black45,
+                                  blurRadius: 2,
+                                  spreadRadius: 1,
+                                  offset: Offset(0, 2))
+                            ]),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            "image/fast food.jpg",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text("Fast Food",style: textStyle)
+                  ],
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Container(
+                margin: const EdgeInsets.only(right: 10),
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 5),
+                        width: 85,
+                        height: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.black45,
+                                  blurRadius: 2,
+                                  spreadRadius: 1,
+                                  offset: Offset(0, 2))
+                            ]),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            "image/aneka nasi.jpg",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text("Aneka Nasi",style: textStyle)
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(right: 10),
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 5),
+                        width: 85,
+                        height: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.black45,
+                                  blurRadius: 2,
+                                  spreadRadius: 1,
+                                  offset: Offset(0, 2))
+                            ]),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            "image/seafood.jpg",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text("Sea Food",style: textStyle)
+                  ],
+                ),
+              ),
+              Column(
                 children: [
-                  Container(
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 5),
+                      width: 85,
+                      height: 70,
                       decoration: BoxDecoration(
-                          color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: const [
                             BoxShadow(
-                                color: Colors.grey,
+                                color: Colors.black45,
                                 blurRadius: 2,
                                 spreadRadius: 1,
-                                offset: Offset(1, 1))
+                                offset: Offset(0, 2))
                           ]),
-                      child: IconButton(
-                          iconSize: 40,
-                          onPressed: () {},
-                          icon: const Icon(Icons.pedal_bike_sharp)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Image.asset(
+                          "image/minuman.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 2,
-                                spreadRadius: 1,
-                                offset: Offset(1, 1))
-                          ]),
-                      child: IconButton(
-                          iconSize: 40,
-                          onPressed: () {},
-                          icon: const Icon(Icons.pedal_bike_sharp)),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 2,
-                                spreadRadius: 1,
-                                offset: Offset(1, 1))
-                          ]),
-                      child: IconButton(
-                          iconSize: 40,
-                          onPressed: () {},
-                          icon: const Icon(Icons.pedal_bike_sharp)),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 2,
-                                spreadRadius: 1,
-                                offset: Offset(1, 1))
-                          ]),
-                      child: IconButton(
-                          iconSize: 40,
-                          onPressed: () {},
-                          icon: const Icon(Icons.pedal_bike_sharp)),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 2,
-                                spreadRadius: 1,
-                                offset: Offset(1, 1))
-                          ]),
-                      child: IconButton(
-                          iconSize: 40,
-                          onPressed: () {},
-                          icon: const Icon(Icons.pedal_bike_sharp)),
-                    ),
+                  ),
+                  Text("Minuman",style: textStyle,)
                 ],
               ),
             ],

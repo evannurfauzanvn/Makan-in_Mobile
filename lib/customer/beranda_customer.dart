@@ -3,7 +3,7 @@ import 'package:project_1/color.dart';
 import 'package:project_1/customer/category_icon.dart';
 import 'package:project_1/customer/event_beranda_customer.dart';
 import 'package:project_1/customer/menu_customer.dart';
-import 'package:project_1/product_card.dart';
+import 'package:project_1/produk/produk_view.dart';
 
 class BerandaCustomer extends StatelessWidget {
   const BerandaCustomer({super.key});
@@ -54,53 +54,98 @@ class BerandaCustomer extends StatelessWidget {
       ),
       body: SingleChildScrollView(
           child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
             height: 200,
             child: PageView.builder(
               controller: controller,
-              itemCount: colors.length,
+              itemCount: diskon.length,
               itemBuilder: (context, index) {
                 return Container(
-                  color: colors[index],
+                  child: diskon[index],
                 );
               },
             ),
           ),
           Container(
-              height: 200, color: warnaBackground, child: const CategoryIcon()),
-          Container(
-            padding: const EdgeInsets.all(4),
+            padding: const EdgeInsets.only(left: 5, right: 5, top: 10),
             color: warnaBackground,
-            child: const Align(
-                alignment: Alignment.topCenter,
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ProductCard(
-                        assetImage: AssetImage("image/burger.jpg"),
-                        shopName: "mamang",
-                        productName: "Cheese Burger",
-                        productPrice: "15.000",
-                        distance: "4",
-                      ),
-                      ProductCard(
-                        assetImage: AssetImage("image/burger.jpg"),
-                        shopName: "mamang",
-                        productName: "Cheese Burger",
-                        productPrice: "15.000",
-                        distance: "4",
-                      ),
-                      ProductCard(
-                        assetImage: AssetImage("image/burger.jpg"),
-                        shopName: "mamang",
-                        productName: "Cheese Burger",
-                        productPrice: "15.000",
-                        distance: "4",
-                      ),
-                    ])),
-          )
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Kategori :",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                Container(
+                  width: 70,
+                  height: 30,
+                  decoration: BoxDecoration(
+                      color: Colors.black38,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(20),
+                      splashColor: Colors.green,
+                      onTap: () {},
+                      child: const Center(
+                          child: Text(
+                        "SEMUA",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold),
+                      )),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(color: warnaBackground, child: const CategoryIcon()),
+          Container(
+            color: warnaBackground,
+            padding: const EdgeInsets.only(left: 5, right: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Rekomendasi :",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                Container(
+                  width: 70,
+                  height: 30,
+                  decoration: BoxDecoration(
+                      color: Colors.black38,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(20),
+                      splashColor: Colors.green,
+                      onTap: () {},
+                      child: const Center(
+                          child: Text(
+                        "SEMUA",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold),
+                      )),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+              padding: const EdgeInsets.all(4),
+              color: warnaBackground,
+              child: const Productview())
         ],
       )),
       bottomNavigationBar: const BottomAppBar(
