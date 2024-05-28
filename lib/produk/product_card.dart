@@ -19,14 +19,14 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const textStyle = TextStyle(
+      color: Colors.black,
       fontSize: 10,
       fontWeight: FontWeight.bold,
     );
 
     return Container(
       width: 345,
-      height: 100,
-      margin: const EdgeInsets.only(top: 5,bottom: 5),
+      margin: const EdgeInsets.only(top: 5, bottom: 5),
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         boxShadow: const [
@@ -93,12 +93,41 @@ class ProductCard extends StatelessWidget {
               ),
             ],
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.more_horiz_outlined),
-            iconSize: 35,
-            padding: const EdgeInsets.only(right: 5, bottom: 5),
-          ),
+          Column(
+            children: [
+              Container(
+                  width: 100,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Tambahkan",
+                        style: textStyle.copyWith(fontSize: 14),
+                      ))),
+              const SizedBox(
+                height: 5,
+              ),
+              const SizedBox(
+                width: 100,
+                height: 30,
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: Row(
+                    children: [
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber)
+                    ],
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
