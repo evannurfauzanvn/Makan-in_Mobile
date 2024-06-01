@@ -3,8 +3,8 @@ import 'package:project_1/color.dart';
 import 'package:project_1/customer/beranda_customer.dart';
 import 'package:project_1/register.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
   double lingkarankecil(BuildContext context) =>
       MediaQuery.of(context).size.width * 2 / 3;
@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: warnaBackground,
+      backgroundColor: primary,
       body: Stack(children: <Widget>[
         Align(
           alignment: Alignment.topCenter,
@@ -44,16 +44,16 @@ class LoginPage extends StatelessWidget {
                           children: [
                             Container(
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "E-mail or phone",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     prefixIcon: Icon(
-                                        color: warnaBackground,
+                                        color: primary,
                                         Icons.email_outlined),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
@@ -61,21 +61,21 @@ class LoginPage extends StatelessWidget {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               margin: const EdgeInsets.only(top: 5, bottom: 5),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 obscureText: true,
                                 decoration: InputDecoration(
                                     labelText: "password",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     prefixIcon: Icon(
-                                        color: warnaBackground,
+                                        color: primary,
                                         Icons.lock_outline),
                                     suffixIcon: IconButton(
-                                      color: warnaBackground,
+                                      color: primary,
                                       icon: const Icon(
                                           Icons.remove_red_eye_outlined),
                                       onPressed: () {},
@@ -90,7 +90,7 @@ class LoginPage extends StatelessWidget {
                                 TextButton(
                                   child: Text("Forgot password?",
                                       style: TextStyle(
-                                        color: warnaTekslink,
+                                        color: textlink,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
                                       )),
@@ -104,7 +104,7 @@ class LoginPage extends StatelessWidget {
                                 TextButton(
                                   child: Text("Sign up!",
                                       style: TextStyle(
-                                        color: warnaTekslink,
+                                        color: textlink,
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold,
                                       )),
@@ -127,8 +127,8 @@ class LoginPage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       gradient: LinearGradient(
                                           colors: [
-                                            colorgradient,
-                                            colorprimar,
+                                            gradientsecondary,
+                                            secondary,
                                           ],
                                           begin: Alignment.topCenter,
                                           end: Alignment.bottomCenter),
@@ -142,14 +142,14 @@ class LoginPage extends StatelessWidget {
                                         Navigator.pushReplacement(context,
                                             MaterialPageRoute(
                                                 builder: ((context) {
-                                          return const BerandaCustomer();
+                                          return const DashboardCustomer();
                                         })));
                                       },
                                       child: Center(
                                           child: Text(
                                         "SIGN IN",
                                         style: TextStyle(
-                                            color: warnaBackground,
+                                            color: primary,
                                             fontSize: 14,
                                             fontWeight: FontWeight.bold),
                                       )),
@@ -157,7 +157,7 @@ class LoginPage extends StatelessWidget {
                                   ),
                                 ),
                                 FloatingActionButton(
-                                  backgroundColor: colorprimar,
+                                  backgroundColor: secondary,
                                   elevation: 1.5,
                                   mini: true,
                                   onPressed: () {},
@@ -169,13 +169,13 @@ class LoginPage extends StatelessWidget {
                                               AssetImage("image/gmail.png"))),
                                 ),
                                 FloatingActionButton(
-                                  backgroundColor: colorprimar,
+                                  backgroundColor: secondary,
                                   elevation: 1.5,
                                   mini: true,
                                   onPressed: () {
                                     Navigator.pushReplacement(context,
                                         MaterialPageRoute(builder: ((context) {
-                                      return const BerandaCustomer();
+                                      return const DashboardCustomer();
                                     })));
                                   },
                                   child: Container(

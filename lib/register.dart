@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_1/color.dart';
 import 'package:project_1/customer/beranda_customer.dart';
-import 'package:project_1/loginpage.dart';
+import 'package:project_1/login.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
@@ -13,7 +13,7 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: warnaBackground,
+      backgroundColor: primary,
       body: Stack(children: <Widget>[
         Align(
           alignment: Alignment.topCenter,
@@ -47,14 +47,14 @@ class Register extends StatelessWidget {
                             Container(
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Front name",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -63,14 +63,14 @@ class Register extends StatelessWidget {
                               margin: const EdgeInsets.only(top: 5),
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: primary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Last name",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -79,14 +79,14 @@ class Register extends StatelessWidget {
                               margin: const EdgeInsets.only(top: 5),
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Email",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -95,14 +95,14 @@ class Register extends StatelessWidget {
                               margin: const EdgeInsets.only(top: 5),
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Phone number",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -111,14 +111,14 @@ class Register extends StatelessWidget {
                               margin: const EdgeInsets.only(top: 5),
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Username",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -127,14 +127,14 @@ class Register extends StatelessWidget {
                               margin: const EdgeInsets.only(top: 5),
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Password",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -143,14 +143,14 @@ class Register extends StatelessWidget {
                               margin: const EdgeInsets.only(top: 5),
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: colorprimar,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: warnaTekssementara),
+                                style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Confirm password",
                                     labelStyle: TextStyle(
-                                        color: warnaBackground, fontSize: 14),
+                                        color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -168,8 +168,8 @@ class Register extends StatelessWidget {
                                     decoration: BoxDecoration(
                                         gradient: LinearGradient(
                                             colors: [
-                                              colorgradient,
-                                              colorprimar,
+                                              gradientsecondary,
+                                              secondary,
                                             ],
                                             begin: Alignment.topCenter,
                                             end: Alignment.bottomCenter),
@@ -184,14 +184,14 @@ class Register extends StatelessWidget {
                                           Navigator.pushReplacement(context,
                                               MaterialPageRoute(
                                                   builder: ((context) {
-                                            return const BerandaCustomer();
+                                            return const DashboardCustomer();
                                           })));
                                         },
                                         child: Center(
                                             child: Text(
                                           "SIGN UP",
                                           style: TextStyle(
-                                              color: warnaBackground,
+                                              color: primary,
                                               fontSize: 14,
                                               fontWeight: FontWeight.bold),
                                         )),
@@ -199,7 +199,7 @@ class Register extends StatelessWidget {
                                     ),
                                   ),
                                   FloatingActionButton(
-                                    backgroundColor: colorprimar,
+                                    backgroundColor: secondary,
                                     elevation: 0,
                                     mini: true,
                                     onPressed: () {},
@@ -211,14 +211,14 @@ class Register extends StatelessWidget {
                                                 AssetImage("image/gmail.png"))),
                                   ),
                                   FloatingActionButton(
-                                    backgroundColor: colorprimar,
+                                    backgroundColor: secondary,
                                     elevation: 0,
                                     mini: true,
                                     onPressed: () {
                                       Navigator.pushReplacement(context,
                                           MaterialPageRoute(
                                               builder: ((context) {
-                                        return const BerandaCustomer();
+                                        return const DashboardCustomer();
                                       })));
                                     },
                                     child: Container(
@@ -248,14 +248,14 @@ class Register extends StatelessWidget {
                                   TextButton(
                                     child: Text("Sign in!",
                                         style: TextStyle(
-                                          color: warnaTekslink,
+                                          color: textlink,
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold,
                                         )),
                                     onPressed: () {
                                       Navigator.pushReplacement(context,
                                           MaterialPageRoute(builder: (context) {
-                                        return const LoginPage();
+                                        return const Login();
                                       }));
                                     },
                                   )

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CategoryIcon extends StatelessWidget {
+class Category extends StatelessWidget {
   final TextStyle textStyle = const TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.bold
   );
 
-  const CategoryIcon({super.key});
+  const Category({super.key});
 
   @override
   Widget build(BuildContext context) {

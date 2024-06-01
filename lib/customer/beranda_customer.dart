@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:project_1/color.dart';
-import 'package:project_1/customer/category_icon.dart';
+import 'package:project_1/customer/category.dart';
 import 'package:project_1/customer/event_beranda_customer.dart';
 import 'package:project_1/chat.dart';
 import 'package:project_1/customer/keranjang.dart';
 import 'package:project_1/customer/profile.dart';
 import 'package:project_1/produk/produk_view.dart';
 
-class BerandaCustomer extends StatelessWidget {
-  const BerandaCustomer({super.key});
+class DashboardCustomer extends StatelessWidget {
+  const DashboardCustomer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class BerandaCustomer extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: colorprimar,
+        backgroundColor: secondary,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -32,7 +32,7 @@ class BerandaCustomer extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Icon(Icons.shopping_cart_outlined,
-                      color: warnaBackground),
+                      color: primary),
                   iconSize: 25,
                   onPressed: () {
                     Navigator.push(context,
@@ -42,7 +42,7 @@ class BerandaCustomer extends StatelessWidget {
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.chat_outlined, color: warnaBackground),
+                  icon: Icon(Icons.chat_outlined, color: primary),
                   iconSize: 25,
                   onPressed: () {
                     Navigator.push(context,
@@ -63,7 +63,7 @@ class BerandaCustomer extends StatelessWidget {
           children: [
             Container(
               height: 230,
-              color: warnaBackground,
+              color: primary,
               child: Stack(children: [
                 SizedBox(
                   height: 200,
@@ -111,7 +111,7 @@ class BerandaCustomer extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.only(left: 5, right: 5),
-              color: warnaBackground,
+              color: primary,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -145,9 +145,9 @@ class BerandaCustomer extends StatelessWidget {
                 ],
               ),
             ),
-            Container(color: warnaBackground, child: const CategoryIcon()),
+            Container(color: primary, child: const Category()),
             Container(
-              color: warnaBackground,
+              color: primary,
               padding: const EdgeInsets.only(left: 5, right: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -184,7 +184,7 @@ class BerandaCustomer extends StatelessWidget {
             ),
             Container(
                 padding: const EdgeInsets.all(4),
-                color: warnaBackground,
+                color: primary,
                 child: const Productview())
           ],
         ),
@@ -249,7 +249,7 @@ class BerandaCustomer extends StatelessWidget {
         child: FloatingActionButton(
           onPressed: () {},
           shape: const CircleBorder(),
-          backgroundColor: warnaBackground,
+          backgroundColor: primary,
           child: const Image(image: AssetImage("image/cart.png")),
         ),
       ),
