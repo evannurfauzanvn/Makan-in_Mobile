@@ -1,14 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:project_1/chat.dart';
 import 'package:project_1/color.dart';
 import 'package:project_1/customer/category.dart';
 import 'package:project_1/customer/event_beranda_customer.dart';
-import 'package:project_1/chat.dart';
 import 'package:project_1/customer/keranjang.dart';
 import 'package:project_1/customer/profile.dart';
 import 'package:project_1/produk/produk_view.dart';
 
 class DashboardCustomer extends StatelessWidget {
-  const DashboardCustomer({super.key});
+  final User user;
+
+  const DashboardCustomer({required this.user,super.key});
 
   @override
   Widget build(BuildContext context) {

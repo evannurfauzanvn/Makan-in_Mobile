@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "586892922451",
+    "project_id": "makan-in-b41b0",
+    "storage_bucket": "makan-in-b41b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586892922451:android:5953628d7cd29091c0c0a6",
+        "android_client_info": {
+          "package_name": "com.example.project_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOmua3wj64FwQbetl592cCSJDeCmnqK2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

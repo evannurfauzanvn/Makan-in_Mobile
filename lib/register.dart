@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:project_1/color.dart';
-import 'package:project_1/customer/beranda_customer.dart';
 import 'package:project_1/login.dart';
 
 class Register extends StatelessWidget {
-  const Register({super.key});
-  double lingkarankecil(BuildContext context) =>
-      MediaQuery.of(context).size.width * 2 / 3;
-  double lingkaranbesar(BuildContext context) =>
-      MediaQuery.of(context).size.width * 7 / 8;
+  Register({super.key});
+
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +54,12 @@ class Register extends StatelessWidget {
                                   color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
+                                controller: firstNameController,
                                 style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
-                                    labelText: "Front name",
-                                    labelStyle: TextStyle(
-                                        color: primary, fontSize: 14),
+                                    labelText: "First name",
+                                    labelStyle:
+                                        TextStyle(color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -63,14 +68,15 @@ class Register extends StatelessWidget {
                               margin: const EdgeInsets.only(top: 5),
                               padding: const EdgeInsets.only(left: 10),
                               decoration: BoxDecoration(
-                                  color: primary,
+                                  color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
+                                controller: lastNameController,
                                 style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Last name",
-                                    labelStyle: TextStyle(
-                                        color: primary, fontSize: 14),
+                                    labelStyle:
+                                        TextStyle(color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -82,11 +88,12 @@ class Register extends StatelessWidget {
                                   color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
+                                controller: emailController,
                                 style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Email",
-                                    labelStyle: TextStyle(
-                                        color: primary, fontSize: 14),
+                                    labelStyle:
+                                        TextStyle(color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -98,11 +105,12 @@ class Register extends StatelessWidget {
                                   color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
+                                controller: phoneController,
                                 style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Phone number",
-                                    labelStyle: TextStyle(
-                                        color: primary, fontSize: 14),
+                                    labelStyle:
+                                        TextStyle(color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -114,27 +122,12 @@ class Register extends StatelessWidget {
                                   color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
-                                style: TextStyle(color: textgray),
-                                decoration: InputDecoration(
-                                    labelText: "Username",
-                                    labelStyle: TextStyle(
-                                        color: primary, fontSize: 14),
-                                    border: const UnderlineInputBorder(
-                                        borderSide: BorderSide.none)),
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(top: 5),
-                              padding: const EdgeInsets.only(left: 10),
-                              decoration: BoxDecoration(
-                                  color: secondary,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: TextField(
+                                controller: passwordController,
                                 style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Password",
-                                    labelStyle: TextStyle(
-                                        color: primary, fontSize: 14),
+                                    labelStyle:
+                                        TextStyle(color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -146,11 +139,12 @@ class Register extends StatelessWidget {
                                   color: secondary,
                                   borderRadius: BorderRadius.circular(10)),
                               child: TextField(
+                                controller: confirmPasswordController,
                                 style: TextStyle(color: textgray),
                                 decoration: InputDecoration(
                                     labelText: "Confirm password",
-                                    labelStyle: TextStyle(
-                                        color: primary, fontSize: 14),
+                                    labelStyle:
+                                        TextStyle(color: primary, fontSize: 14),
                                     border: const UnderlineInputBorder(
                                         borderSide: BorderSide.none)),
                               ),
@@ -180,13 +174,7 @@ class Register extends StatelessWidget {
                                       child: InkWell(
                                         borderRadius: BorderRadius.circular(20),
                                         splashColor: Colors.green,
-                                        onTap: () {
-                                          Navigator.pushReplacement(context,
-                                              MaterialPageRoute(
-                                                  builder: ((context) {
-                                            return const DashboardCustomer();
-                                          })));
-                                        },
+                                        onTap: () {},
                                         child: Center(
                                             child: Text(
                                           "SIGN UP",
@@ -214,13 +202,7 @@ class Register extends StatelessWidget {
                                     backgroundColor: secondary,
                                     elevation: 0,
                                     mini: true,
-                                    onPressed: () {
-                                      Navigator.pushReplacement(context,
-                                          MaterialPageRoute(
-                                              builder: ((context) {
-                                        return const DashboardCustomer();
-                                      })));
-                                    },
+                                    onPressed: () {},
                                     child: Container(
                                         padding: const EdgeInsets.fromLTRB(
                                             2, 2, 2, 2),
@@ -255,7 +237,7 @@ class Register extends StatelessWidget {
                                     onPressed: () {
                                       Navigator.pushReplacement(context,
                                           MaterialPageRoute(builder: (context) {
-                                        return const Login();
+                                        return Login();
                                       }));
                                     },
                                   )
